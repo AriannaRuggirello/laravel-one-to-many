@@ -15,5 +15,12 @@
 
 
 
+
+        @foreach ($projects->type as $type)
+            <span class="text-danger">
+                {{ $type->type_name }}
+            </span>
+        @endforeach
+
     </div>
 @endsection
