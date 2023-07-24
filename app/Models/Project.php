@@ -16,4 +16,9 @@ class Project extends Model
     ];
 
     use HasFactory;
+
+    public function type() {
+
+        return $this -> hasMany(type :: class);
+    }
 }
