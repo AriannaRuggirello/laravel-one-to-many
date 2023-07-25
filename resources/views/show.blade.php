@@ -1,26 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-5">
-
-        <h1>
-            &#128193; {{ $projects->title }}
-        </h1>
-
-        <h6> {{ $projects->publish_date }}</h6>
-
+    <div class="container text-center pt-5">
+        <h1>{{ $project->name }}</h1>
         <p>
-            {{ $projects->description }}
+            {{ $project->description }}
         </p>
-
-
-
-
-        @foreach ($projects->type as $type)
-            <span class="text-danger">
-                {{ $type->type_name }}
+        <div class="row my-3">
+            <span class="col bg-dark text-light rounded mx-3">
+                Start date: {{ $project->start_date }}
             </span>
-        @endforeach
-
+            <span class="col bg-dark text-light rounded mx-3">
+                End date: {{ $project->end_date }}
+            </span>
+        </div>
+        <div class="row">
+            <span class="col bg-dark text-light rounded mx-3">
+                Type: {{ $project->type->name }}
+            </span>
+            <span class="col bg-dark text-light rounded mx-3">
+                Difficulty: {{ $project->difficulty }}
+            </span>
+        </div>
     </div>
 @endsection

@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class type extends Model
+class Type extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'type_name',
-        'project_id'
-
+        "name",
+        "description"
     ];
 
-    public function project() {
+    public function projects() {
 
-        return $this -> belongsTo(Projects :: class);
+        return $this -> hasMany(Project :: class);
     }
 }
