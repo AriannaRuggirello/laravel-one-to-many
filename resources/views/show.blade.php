@@ -6,7 +6,7 @@
         <p>
             {{ $projects->description }}
         </p>
-        <div class="row my-3">
+        <div class="row text-center my-3">
             <span class="col-lg-3 bg-primary text-light rounded mx-3">
                 Publish date: {{ $projects->publish_date }}
             </span>

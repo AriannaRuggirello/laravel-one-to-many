@@ -20,7 +20,7 @@ class ProjectFactory extends Factory
             'title'=> fake()-> word(),
             'publish_date'=> fake()-> date(),
             'description'=> fake()-> paragraph(),
-            'aviable'=> fake()-> boolean(),
+
 
         ];
     }

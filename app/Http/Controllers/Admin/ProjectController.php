@@ -26,4 +26,20 @@ class ProjectController extends Controller
 
 	}
 
+    public function create() {
+
+        $types = type :: all();
+
+        return view('create', compact('types'));
+    }
+
+    public function store(Request $request) {
+
+        $data = $request -> all();
+
+        $project = Project :: create($data);
+
+        return redirect() -> route('project.show', $project -> id);
+    }
+
 }

@@ -28,7 +28,13 @@ Route :: get('/show/{id}', [ProjectController :: class, 'show'])->middleware(['a
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route :: get('/create', [ProjectController :: class, 'create'])
+    -> middleware(['auth'])
+    -> name('project.create');
 
+Route :: post('/store', [ProjectController :: class, 'store'])
+    -> middleware(['auth'])
+    -> name('project.store');
 
 
 Route::middleware('auth')->group(function () {

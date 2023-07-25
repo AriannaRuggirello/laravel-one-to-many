@@ -12,7 +12,7 @@ class Project extends Model
         'title',
         'publish_date',
         'description',
-        'aviable'
+
     ];
 
     use HasFactory;
